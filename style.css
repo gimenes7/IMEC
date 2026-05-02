@@ -393,47 +393,180 @@ main > .bimg {
   margin-bottom: 1rem;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
-footer {
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: #fffbf3 !important;
+  color: #444;
+  font-family: "Segoe UI", sans-serif;
+  padding: 3rem 2rem 0;
+  border-top: 3px solid #1f6feb;
+  margin-top: auto;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 0.75rem;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.footer-social {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: rgb(253, 252, 253);
-  box-shadow: 0px 30px 60px;
-  width: 100%;
-  height: 120px;
-  font-family: "Bebas Neue", sans-serif;
+  gap: 0.6rem;
 }
 
-footer > div:first-child {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-footer > div:first-child img {
-  width: 90px;
-  height: auto;
-}
-
-footer > div:first-child .textos {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 4px;
-}
-
-footer > div:first-child p {
-  margin: 0;
-  line-height: 1.2;
-}
-
-.mt-5 {
+.social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fff !important;
+  border: 1px solid #ccc !important;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  border-color: #1f6feb !important;
+}
+.social-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: none !important;
+}
+
+.footer-col h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #222 !important;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer-col ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col ul li a,
+.footer-col ul li {
+  color: #555 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem;
+  transition:
+    color 0.2s,
+    padding-left 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.footer-col ul li a:hover {
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-dev {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.footer-dev strong {
+  color: #444;
+}
+.dev-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dev-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  text-decoration: none !important;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.dev-link--wa {
+  color: #25d366 !important;
+  background: rgba(37, 211, 102, 0.08);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+.dev-link--wa:hover {
+  background: rgba(37, 211, 102, 0.18) !important;
+  border-color: #25d366 !important;
+  transform: translateY(-1px);
+}
+
+.dev-link--ig {
+  color: #e1306c !important;
+  background: rgba(225, 48, 108, 0.08);
+  border: 1px solid rgba(225, 48, 108, 0.3);
+}
+.dev-link--ig:hover {
+  background: rgba(225, 48, 108, 0.18) !important;
+  border-color: #e1306c !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-dev {
+    justify-content: center;
+  }
 }
